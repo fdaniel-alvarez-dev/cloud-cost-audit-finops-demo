@@ -23,24 +23,29 @@ This repository is a fully local, reproducible simulation of that engagement. It
 
 ```mermaid
 flowchart LR
-  subgraph Inputs
-    A[AWS CUR-like CSV] --> N[Normalize + Validate]
-    G[GCP Billing Export-like CSV] --> N
-    I[Inventory Snapshots CSV] --> W[Waste Detection]
-    U[Utilization Signals CSV] --> W
-  end
+    %% === INPUTS ===
+    subgraph Inputs
+        A["AWS CUR-like CSV"] --> N["Normalize + Validate"]
+        G["GCP Billing Export-like CSV"] --> N
+        I["Inventory Snapshots CSV"] --> W["Waste Detection"]
+        U["Utilization Signals CSV"] --> W
+    end
 
-  N --> D[(DuckDB)]
-  W --> D
+    %% === PROCESSING ===
+    N --> D[(DuckDB)]
+    W --> D
 
-  D --> Q[Quick Wins (Top 10)]
-  D --> R[Executive Report (HTML/MD)]
-  D --> S[Static Dashboard Snapshot (HTML)]
-  D --> T[Streamlit Dashboard]
+    %% === OUTPUTS ===
+    D --> Q["Quick Wins (Top 10)"]
+    D --> R["Executive Report<br>(HTML/MD)"]
+    D --> S["Static Dashboard Snapshot<br>(HTML)"]
+    D --> T["Streamlit Dashboard"]
 
-  Q --> O[out/*.csv + out/*.json]
-  R --> O
-  S --> O
+    %% === OUTPUT FILES ===
+    Q --> O["out/*.csv + out/*.json"]
+    R --> O
+    S --> O
+    T --> O
 ```
 
 ## Quantifiable Results (from the deterministic demo data)
