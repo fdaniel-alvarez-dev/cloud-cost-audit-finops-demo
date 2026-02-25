@@ -1,0 +1,15 @@
+invoice_month: "2026-01"
+data_dir: "data"
+output_dir: "out"
+duckdb_path: "out/audit.duckdb"
+
+required_allocation_keys:
+  - env
+  - app
+  - team
+  - cost_center
+
+thresholds:
+  underutilized_cpu_pct: 10.0
+  min_compute_cost_usd: 150.0
+

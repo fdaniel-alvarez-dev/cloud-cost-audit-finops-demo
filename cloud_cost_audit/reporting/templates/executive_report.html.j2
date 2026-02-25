@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cloud Cost Audit — Executive Report</title>
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 32px; color: #111; }
+      h1, h2, h3 { margin: 0 0 12px 0; }
+      .muted { color: #555; }
+      .kpi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 16px 0 24px; }
+      .card { border: 1px solid #eee; border-radius: 10px; padding: 14px; }
+      table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; }
+      th, td { border-bottom: 1px solid #eee; text-align: left; padding: 8px; vertical-align: top; }
+      th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: #555; }
+      .right { text-align: right; }
+      code { background: #f6f6f6; padding: 2px 6px; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>Cloud Cost Audit — Executive Report</h1>
+    <p class="muted">Invoice month: <b>{{ invoice_month }}</b> • Generated locally from deterministic mock data</p>
+
+    <div class="kpi">
+      <div class="card">
+        <div class="muted">Baseline spend (monthly)</div>
+        <div style="font-size: 22px;"><b>${{ baseline_cost_usd }}</b></div>
+      </div>
+      <div class="card">
+        <div class="muted">Top-10 quick wins savings</div>
+        <div style="font-size: 22px;"><b>${{ savings_total_usd }}</b></div>
+      </div>
+      <div class="card">
+        <div class="muted">Estimated savings rate</div>
+        <div style="font-size: 22px;"><b>{{ savings_pct }}%</b></div>
+      </div>
+    </div>
+
+    <h2>Top 10 Quick Wins</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Quick win</th>
+          <th>Scope</th>
+          <th class="right">Expected monthly savings</th>
+          <th>Confidence</th>
+          <th>Risk</th>
+          <th>Effort</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for q in quick_wins %}
+        <tr>
+          <td>{{ q.rank }}</td>
+          <td><b>{{ q.title }}</b><br/><span class="muted">{{ q.description }}</span></td>
+          <td>{{ q.scope }}</td>
+          <td class="right">${{ "%.0f"|format(q.expected_savings_monthly_usd) }}</td>
+          <td>{{ q.confidence }}</td>
+          <td>{{ q.risk }}</td>
+          <td>{{ q.effort }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Cost allocation readiness (tags / labels)</h2>
+    <p>
+      Fully allocated spend: <b>{{ fully_allocated_pct }}%</b>
+      (required keys: <code>{{ required_keys }}</code>)
+    </p>
+    <table>
+      <thead>
+        <tr><th>Key</th><th class="right">Cost coverage</th></tr>
+      </thead>
+      <tbody>
+        {% for k, v in coverage_by_key.items() %}
+        <tr><td>{{ k }}</td><td class="right">{{ (v*100) | round(1) }}%</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Notes</h2>
+    <ul>
+      <li>This is a local demo repo; cloud integrations are mocked by design.</li>
+      <li>Savings estimates are expected values and should be validated with a short measurement window.</li>
+    </ul>
+  </body>
+</html>
+
