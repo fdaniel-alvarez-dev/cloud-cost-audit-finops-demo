@@ -1,22 +1,64 @@
-MIT License
+PolyForm Noncommercial License 1.0.0
 
-Copyright (c) 2026
+© 2026 Freddy D. Alvarez (@fdaniel-alvarez-dev). All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This project (including its code, diagrams, documentation, and generated artifacts) is provided free of charge for personal, educational, and other noncommercial use.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Commercial use (including but not limited to: incorporating into paid products/services, resale, internal enterprise use, consulting deliverables, SaaS usage, or any revenue-generating activity) requires a separate paid commercial license from the Licensor.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+To obtain a commercial license, contact:
+Freddy D. Alvarez — falvarezpinto@gmail.com
+
+---
+
+Full license text:
+
+1. Definitions
+
+“Commercial Purpose” means any use that is primarily intended for or directed toward commercial advantage or monetary compensation.
+
+“License” means this PolyForm Noncommercial License 1.0.0.
+
+“Licensor” means the copyright holder or entity authorized by the copyright holder that is granting the License.
+
+“Software” means the software, documentation, and any other works distributed under this License.
+
+“You” means the individual or entity exercising permissions granted by this License.
+
+2. License Grant
+
+Subject to the terms and conditions of this License, the Licensor grants You a worldwide, non-exclusive, royalty-free, non-transferable, non-sublicensable license to:
+
+a. use, copy, modify, and distribute the Software for noncommercial purposes only; and
+b. make derivative works of the Software for noncommercial purposes only.
+
+3. Limitations
+
+a. Commercial Use Prohibited. You may not use the Software for any Commercial Purpose.
+b. No Sublicensing. You may not sublicense the Software.
+c. No Trademark License. This License does not grant You any rights in trademarks, service marks, or logos.
+
+4. Redistribution
+
+If You distribute the Software (including modified versions) for noncommercial purposes, You must:
+
+a. include a copy of this License; and
+b. retain all copyright notices.
+
+5. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+6. Limitation of Liability
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. Termination
+
+This License is effective until terminated. Your rights under this License will terminate automatically if You fail to comply with any of its terms. Upon termination, You must cease all use and distribution of the Software.
+
+8. Miscellaneous
+
+a. If any provision of this License is held to be unenforceable, that provision will be reformed only to the extent necessary to make it enforceable.
+b. This License is the complete agreement regarding the Software between You and the Licensor.
 

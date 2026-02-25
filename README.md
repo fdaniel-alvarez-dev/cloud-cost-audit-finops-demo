@@ -118,3 +118,12 @@ Example (top 3 quick wins preview from `out/quick_wins.csv`):
 - `out/`: generated outputs/artifacts (created by `make demo`)
 - `iac/`: safe Terraform examples (not required for local demo execution)
 - `.github/workflows/ci.yml`: CI running `make verify`
+
+## License
+© 2026 Freddy D. Alvarez (@fdaniel-alvarez-dev). All rights reserved.
+
+This project is provided free of charge for **personal, educational, and other noncommercial use**.
+
+Any **commercial use** (including but not limited to: incorporating into paid products/services, resale, internal enterprise use, consulting deliverables, SaaS usage, or any revenue-generating activity) requires a **separate paid commercial license**.
+
+To obtain a commercial license, contact: Freddy D. Alvarez (`falvarezpinto@gmail.com`).
